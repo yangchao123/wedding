@@ -1,0 +1,241 @@
+
+/* ============================ reset.css ====================== */
+a, abbr, acronym, address, applet, article, aside, audio,
+b, blockquote, big, body,
+center, canvas, caption, cite, code, command,
+datalist, dd, del, details, dfn, dl, div, dt, 
+em, embed,
+fieldset, figcaption, figure, font, footer, form, 
+h1, h2, h3, h4, h5, h6, header, hgroup, html,
+i, iframe, img, ins,
+kbd, 
+keygen,
+label, legend, li, 
+meter,
+nav,
+object, ol, output,
+p, pre, progress,
+q, 
+s, samp, section, small, span, source, strike, strong, sub, sup,
+table, tbody, tfoot, thead, th, tr, tdvideo, tt,
+u, ul, 
+var{
+    background: transparent;
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+		padding: 0;
+		border: 0;
+		outline: 0;
+    vertical-align: top; }
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+table, table td { 
+	padding:0;
+	border:none;
+	border-collapse:collapse;
+}
+img {
+	vertical-align:top; 
+}
+embed { 
+	vertical-align:top;
+}
+* { border:none}
+input, textarea{ outline:none !important}
+
+/* Getting the new tags to behave */
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video{ display: block; }
+mark, rp, rt, ruby, summary, time{ display: inline }
+/* ============================ reset.css end ====================== */
+
+
+/* ============================= layout.css ====================== */
+.col1, .col2, .col3, .cols { float:left;}
+
+.col1{ width:175px;}
+.col2{ width:130px;}
+.col3{ width:90px;}
+
+#page_Events .col1{ width:370px;}
+
+#page_Contacts .col1{ width:170px;}
+#page_Contacts .col2{ width:67px;}
+/* ============================ layout.css end ====================== */
+
+
+/* ============================= style.css ====================== */
+/* Left & Right alignment */
+
+.left { float:left;}
+.right { float:right;}
+.wrapper {width:100%; overflow:hidden;}
+.relative{ position:relative;}
+
+/* Global properties ======================================================== */
+
+body{border:0; font:12px 'Open Sans', sans-serif; color:#4c4b4b; line-height:20px; min-width:950px;}
+
+.css3{border-radius: 8px; -moz-border-radius: 8px; -webkit-border-radius: 8px; box-shadow: 0 0 4px rgba(0, 0, 0, .4); -moz-box-shadow: 0 0 4px rgba(0, 0, 0, .4); -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, .4); position: relative;}
+
+.page_spinner{ position:absolute;background: url(../images/bg.jpg) center 0 repeat #171717; z-index:99; width:100%; height:1000px; top:0; left:0}
+.page_spinner div{ position:absolute;background: url(../images/ajax-loader.gif) 50% 30% no-repeat;width:100%; height:100%; top:0; left:0}
+
+/* Global Structure ============================================================= */
+
+.main {	margin: 0 auto;	width: 950px; position:relative }
+
+body, html{ height:100%}
+.over{ position:relative; width:100%; overflow:hidden;min-height:100%; height:auto !important; background: url(../images/bg.jpg) center 0 repeat #131313; }
+
+.left_shadow{ position:absolute; left:0; background:url(../images/shadow_left.png) 0 0 repeat-y; top:0; bottom:0; width:314px;}
+.right_shadow{ position:absolute; right:0; background:url(../images/shadow_right.png) 0 0 repeat-y; top:0; bottom:0; width:314px;}
+.splash_bg{ position:absolute; top:0; bottom:0; width:930px; background:url(../images/bg_splash.jpg) 0 0 no-repeat; left:50%; margin-left:-465px;}
+
+.bg1{ background:url(../images/bg_top.png) 0 0 repeat-x; height:48px; position:relative; z-index:2}
+.bg2{ background:url(../images/bg_top.png) 0 0 repeat-x; height:48px; position:absolute; bottom:0; left:0; right:0; z-index:2}
+
+/* ============================= main layout ====================== */
+
+a{ color:#b62716; text-decoration: none; outline:none}
+a:hover{ text-decoration: none}
+/*h1{ top:282px; left:148px; background:url(../images/logo.png) 0 0 no-repeat; padding:82px 27px 37px 153px; position:absolute; z-index:2}*/
+h1{ display:block; top:282px; left:148px; background:url(../images/logo.png) 0 0 no-repeat; padding:82px 27px 37px 153px; position:relative; z-index:2}
+h2{ font-size:25px; color:#111111; line-height:1.2em; padding:110px 0 21px 0; letter-spacing:-2px;  font-weight:bold;}
+h2.pad_top1{ padding-top:32px}
+p{ padding-bottom:18px;}
+
+/* ============================= header ====================== */
+header{ height:48px; position:relative; z-index:2}
+
+/*#logo{ display:block; text-indent:-9999px; width:350px; height:177px;}*/
+#logo{ display:block; text-indent:70px; font-size:20px; width:350px; height:177px;}
+
+#menu { padding-left:260px;}
+#menu > li { float:left; position:relative;}
+#menu > li > a{ position:relative; font-size:20px; color:#fff; padding:0 13px; display:block; line-height:44px; padding-bottom:6px; z-index:8}
+#menu > li > span{ position:absolute; top:0; left:-7px; position:absolute; right:-7px; height:75px; z-index:7}
+#menu > li > a:hover, #menu > .active > a{}
+/*
+.submenu_1{ position:absolute; top:49px; left:-40px; width:160px; background:#131313; z-index:6; padding:24px 0; border:1px solid #262626}
+.submenu_1 li{ line-height:26px; position:relative;}
+.submenu_1 span{ position:absolute; background:#262626; top:0; left:0; width:100%; height:100%}
+.submenu_1 a{ font-size:13px; color:#fff; text-align:center; display:block; position:relative;}
+*/
+.nav4{ background:url(../images/bg_nav4.png) 0 0 no-repeat}
+
+/* ============================= content ====================== */
+
+#content{ height:918px; padding-bottom:48px; position:relative;  z-index:1}
+#content > ul{ position: absolute;background:url(../images/bg_content.jpg) 0 0 no-repeat;height:685px; top:175px; z-index:1; left:0; width:100%; overflow:hidden}
+#content > ul > li{ width:100%;}
+#content > ul > li > div { position:absolute; height:670px;}
+
+.left_box{ left:10px; width:465px; background:url(../images/bg_cont_left.jpg) 0 0 no-repeat}
+.right_box{ left:476px; width:464px; background:url(../images/bg_cont_right.jpg) 0 0 no-repeat}
+
+.link1{ position:relative;}
+.link1 span{ position:absolute; bottom:0; left:0; height:1px; width:0;}
+
+.shadow1{ position:absolute; top:0; right:0;}
+.shadow_1{ position:absolute; top:0; right:0; display:none; height:100%}
+.shadow_2{ position:absolute; top:0; right:421px; height:100%}
+
+.block{ padding-left:45px; width:420px; position:relative;}
+#page_Privacy .block{ width:360px;}
+#page_More .block{ width:360px;}
+
+.font1{ font-size:14px; color:#b62716}
+.font1 .color1{ color:#141211}
+
+.scroll{height:457px; width:370px; overflow:hidden;}
+.track{ width:27px; height:666px; padding:3px 0; top:34px !important; left:435px !important; background: url(../images/scroll_track.png) 0 0 no-repeat}
+.shuttle{ width:20px; height:60px; background: url(../images/scroll_drag.png) 0 0 no-repeat; margin-left:4px;}
+._up-butt, ._down-butt{ height:0px !important;}
+#page_About .scroll{height:400px; margin-bottom:20px; width:360px;}
+
+.button1{ display:inline-block; position:relative; border:1px solid #000000; font-size:11px; font-weight:bold; text-transform:uppercase; line-height:26px; color:#fff;border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;}
+.button1 strong{ position:absolute; top:0; left:0; right:0; bottom:0; border:1px solid #666; background:url(../images/bg_button.jpg) 0 0 no-repeat #2b2b2b; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;}
+.button1 .active{ border:none; background: url(../images/bg_button_active.jpg) 0 0 no-repeat #d83e0f; border:1px solid #f56915; }
+.button1 span{ position:relative; display:block;padding:0 9px; top:1px; left:1px; margin-bottom:2px; margin-right:2px;}
+
+.pad_bot1{ padding-bottom:14px;}
+.pad_bot2{ padding-bottom:24px;}
+.marg_right1{ margin-right:20px}
+.marg_right2{ margin-right:40px}
+#page_Events .marg_right2{ margin-right:15px}
+
+figure{ padding-top:5px} 
+
+.gallery_img{ padding-bottom:14px;} 
+.gallery_img a{ position:relative; display:block}
+.gallery_img span{ background:url(../images/gallery_border.png) 0 0 no-repeat; position:absolute; width:100%; height:100%; top:0; left:0}
+
+.gallery_big_img{ width:465px; height:670px; position:relative}
+.gallery_big_img img{ position:absolute; top:0; left:0;}
+
+/*
+#gallery2{ width:370px !important}
+#gallery2 li{ width:175px; float:left; margin-right:20px;}
+#gallery2 a{ position:relative; display:block; margin-top:7px; margin-bottom:14px}
+#gallery2 a span{ position:absolute; background: url(../images/border.png) 0 0 no-repeat; width:100%; height:100%; top:0; left:0}
+#gallery2 .font1{ word-spacing:-2px;}
+#gallery2 img{ width:175px; height:110px;}
+*/
+#prev, #next{ float:left; margin-right:1px; width:30px; height:30px; background:url(../images/markers.gif) 0 0 no-repeat; margin-top:9px; position:relative}
+#next{ background-position:right bottom}
+#prev span, #next span{ position:absolute; width:100%; height:100%; background:url(../images/markers.gif) 0 bottom no-repeat; top:0; left:0}
+#next span{ background-position:right 0}
+
+.list1{}
+.list1 li{ padding-bottom:5px;}
+.list1 a{ color:#4c4b4b; padding-left:12px; background:url(../images/marker_1.png) 0 6px no-repeat}
+
+.link2{ color:#4c4b4b}
+
+.google_map{width:465px; height:670px; padding-top:0; position:relative; background:#fff}
+.angle_top{ position:absolute; top:0; left:0;}
+.angle_bot{ position:absolute; bottom:0; left:0;}
+
+/* ============================= footer ====================== */
+
+footer { font:12px Arial, Helvetica, sans-serif; color:#fff; padding-top:15px; text-align:center}
+footer a{ color:#f07647}
+footer a:hover{}
+
+/* ============================= forms ============================= */
+
+#ContactForm{ padding-top:5px; position:relative; width:370px;}
+#ContactForm .wrapper{ overflow:inherit; min-height:37px;}
+#ContactForm .success{display:none; position:absolute; bottom:0; right:0}
+#ContactForm label{ position:relative;min-height:27px; display: inline-block;}
+#ContactForm .message{ height:125px;}
+#ContactForm .error, #ContactForm .empty{ font-size:10px; color:#b62716; line-height:14px; display:none; width:100%}
+#ContactForm a{ float:left; margin-right:10px;}
+#ContactForm .input { margin:0;width:244px; height:15px; background: none; padding:5px 7px;color:#4c4b4b; font:12px 'Open Sans', sans-serif;}
+#ContactForm textarea { overflow: auto; margin:0;resize:none;width:354px; height:83px; background: none; padding:5px 7px;color:#4c4b4b; font:12px 'Open Sans', sans-serif;}
+
+
+#ContactForm  .bg{ background:#fff; border:1px solid #dedddd;position:relative;border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; display:inline-block;}
+
+
+/* ============================= music and petal ctrl ====================== */
+
+#m_ctrl{
+    position: fixed;
+    right: 15px;
+    top: 80%;
+    display: inline-block;
+}
+#p_ctrl{
+    position: fixed;
+    right: 10px;
+    top: 60%;
+    display: inline-block;
+}
+/* ============================= music and petal ctrl end ====================== */

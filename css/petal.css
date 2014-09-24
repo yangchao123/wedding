@@ -1,0 +1,113 @@
+
+/* This CSS rule is applied to all div elements in the leafContainer div.
+   It styles and animates each leafDiv.
+*/
+#petalScreen > div.petal
+{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    z-index: 999;
+    
+    /* We use the following properties to apply the fade and drop animations to each leaf.
+       Each of these properties takes two values. These values respectively match a setting
+       for fade and drop.
+    */
+    animation-iteration-count: infinite, infinite;
+    animation-direction: normal, normal;
+    animation-timing-function: linear, ease-in;
+
+    -webkit-animation-iteration-count: infinite, infinite;
+    -webkit-animation-direction: normal, normal;
+    -webkit-animation-timing-function: linear, ease-in;
+}
+
+/* This CSS rule is applied to all img elements directly inside div elements which are
+   directly inside the leafContainer div. In other words, it matches the 'img' elements
+   inside the leafDivs which are created in the createALeaf() function.
+*/
+#petalScreen > div.petal > img {
+     position: absolute;
+     width: 80px;
+     height: 80px;
+
+    /* We use the following properties to adjust the clockwiseSpin or counterclockwiseSpinAndFlip
+       animations on each leaf.
+       The createALeaf function in the Leaves.js file determines whether a leaf has the 
+       clockwiseSpin or counterclockwiseSpinAndFlip animation.
+    */
+     animation-iteration-count: infinite;
+     animation-direction: alternate;
+     animation-timing-function: ease-in-out;
+     transform-origin: 50% -100%;
+
+     -webkit-animation-iteration-count: infinite;
+     -webkit-animation-direction: alternate;
+     -webkit-animation-timing-function: ease-in-out;
+     -webkit-transform-origin: 50% -100%;
+}
+
+
+/* Hides a leaf towards the very end of the animation */
+@keyframes fade
+{
+    /* Show a leaf while into or below 95 percent of the animation and hide it, otherwise */
+    0%   { opacity: 1; }
+    95%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+@-webkit-keyframes fade
+{
+    /* Show a leaf while into or below 95 percent of the animation and hide it, otherwise */
+    0%   { opacity: 1; }
+    95%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Makes a leaf fall from -300 to 600 pixels in the y-axis */
+@keyframes drop
+{
+    /* Move a leaf to -300 pixels in the y-axis at the start of the animation */
+    0%   { transform: translate(0px, -50px); }
+    /* Move a leaf to 600 pixels in the y-axis at the end of the animation */
+    100% { transform: translate(0px, 1000px); }
+}
+@-webkit-keyframes drop
+{
+    /* Move a leaf to -300 pixels in the y-axis at the start of the animation */
+    0%   { -webkit-transform: translate(0px, -50px); }
+    /* Move a leaf to 600 pixels in the y-axis at the end of the animation */
+    100% { -webkit-transform: translate(0px, 900px); }
+}
+
+/* Rotates a leaf from -50 to 50 degrees in 2D space */
+@keyframes clockwiseSpin
+{
+    /* Rotate a leaf by -50 degrees in 2D space at the start of the animation */
+    0%   { transform: rotate(-50deg); }
+    /*  Rotate a leaf by 50 degrees in 2D space at the end of the animation */
+    100% { transform: rotate(50deg); }
+}
+@-webkit-keyframes clockwiseSpin
+{
+    /* Rotate a leaf by -50 degrees in 2D space at the start of the animation */
+    0%   { -webkit-transform: rotate(-50deg); }
+    /*  Rotate a leaf by 50 degrees in 2D space at the end of the animation */
+    100% { -webkit-transform: rotate(50deg); }
+}
+
+/* Flips a leaf and rotates it from 50 to -50 degrees in 2D space */
+@keyframes counterclockwiseSpinAndFlip 
+{
+    /* flip a leaf and rotate it by 50 degrees in 2D space at the start of the animation */
+    0%   { transform: scale(-1, 1) rotate(50deg); }
+    /* flip a leaf and rotate it by -50 degrees in 2D space at the end of the animation */
+    100% { transform: scale(-1, 1) rotate(-50deg); }
+}
+@-webkit-keyframes counterclockwiseSpinAndFlip 
+{
+    /* flip a leaf and rotate it by 50 degrees in 2D space at the start of the animation */
+    0%   { -webkit-transform: scale(-1, 1) rotate(50deg); }
+    /* flip a leaf and rotate it by -50 degrees in 2D space at the end of the animation */
+    100% { -webkit-transform: scale(-1, 1) rotate(-50deg); }
+}
